@@ -10,7 +10,10 @@ use yii\widgets\ActiveForm;
 
 <div class="textoperguntas-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php
+    $resposta =  Array('prompt' => 'Selecione...', '1'=>'op1','2'=>'op2','3'=> 'op3','4'=> 'op4','5'=> 'op5');
+    $form = ActiveForm::begin();
+    ?>
 
     <?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
 
@@ -24,7 +27,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'op5')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'resposta')->textInput() ?>
+    <?= $form->field($model, 'resposta')->dropDownList($resposta) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

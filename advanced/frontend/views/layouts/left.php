@@ -6,16 +6,19 @@
                 <img src="img/icon.png" class="img-circle" alt="User Image"/>
             </div>-->
             <div class="pull-left image">
-                 <h4 style="color: #fff" >
-                       <span class="fa fa-user-circle"></span>
-                     Usuário: <?php
-                            if(Yii::$app->user->getId()) {
-                                echo Yii::$app->user->identity->getNome();
-                            }else{
-                                echo 'Administrador';
-                            }
-                        ?>
-                 </h4>
+                 <h1 style="color: #fff" >
+                      <span class="fa fa-user-circle"></span>
+                  </h1>
+            </div>
+            <div class="pull-left info">
+                <h4><br> Usuário: <?php
+                    if(Yii::$app->user->getId()) {
+                        echo Yii::$app->user->identity->getNome();
+                    }else{
+                        echo 'Administrador';
+                    }
+                    ?>
+                </h4>
             </div>
         </div>
         <!-- search form -->
@@ -26,8 +29,15 @@
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
                     ['label' => 'Menu', 'options' => ['class' => 'header']],
-                    ['label' => 'Perguntas', 'icon' => 'fa fa-list-alt', 'url' => ['textoperguntas/index']],
-                    ['label' => 'Localizacoes', 'icon' => 'fa fa-map-marker', 'url' => ['localizacoes/index']],
+                    ['label' => 'Home', 'icon' => 'fa fa-home', 'url' => ['site/index']],
+                    ['label' => 'Perguntas', 'icon' => 'fa fa-list', 'url' => ['perguntas/index']],
+                    ['label' => 'Texto Perguntas', 'icon' => 'fa fa-list-alt', 'url' => ['textoperguntas/index']],
+                    ['label' => 'Localizações', 'icon' => 'fa fa-map-marker', 'url' => ['localizacoes/index']],
+                    ['label' => 'Perguntas Finais', 'icon' => 'fa fa-trophy', 'url' => ['perguntasfinais/index']],
+                    ['label' => 'Jogos', 'icon' => 'fa fa-gamepad', 'url' => ['jogo/index']],
+                    ['label' => 'Times', 'icon' => 'fa fa-group', 'url' => ['times/index']],
+                    ['label' => 'Jogadores', 'icon' => 'fa fa-user', 'url' => ['jogador/index']],
+
                 ],
             ]
         )

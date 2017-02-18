@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\TextoperguntasSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Textoperguntas';
+$this->title = 'Texto das Perguntas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="textoperguntas-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Nova Pergunta', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Nova Pergunta', ['create'], ['class' => 'btn btn-facebook pull-right']) ?>
     </p>
     <?= GridView::widget([
         'summary' =>'',
@@ -36,5 +36,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
-    ]); ?>
+    ]);
+    ?>
 </div>

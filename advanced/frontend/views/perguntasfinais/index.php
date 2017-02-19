@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\PerguntasfinaisSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Perguntasfinais';
+$this->title = 'Perguntas Finais';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="perguntasfinais-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Perguntasfinais', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Criar Pergunta Final', ['create'], ['class' => 'btn btn-facebook pull-right']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

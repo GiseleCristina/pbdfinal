@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\JogadorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Jogadors';
+$this->title = 'Jogadores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="jogador-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Jogador', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Criar Jogador', ['create'], ['class' => 'btn btn-facebook pull-right']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

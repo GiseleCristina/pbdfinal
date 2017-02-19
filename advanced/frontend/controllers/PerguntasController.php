@@ -8,6 +8,9 @@ use common\models\PerguntasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+use common\models\Textoperguntas;
+
 
 /**
  * PerguntasController implements the CRUD actions for Perguntas model.
@@ -121,4 +124,17 @@ class PerguntasController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+   /* public function ActionPergunta()
+    {
+        $model = new Perguntas();
+
+        $textoPerguntas = Textoperguntas::find()->all();
+        $arrayPerguntas = ArrayHelper::map($textoPerguntas, 'id');
+
+        return $this->render('create', [
+            'model' => $model,
+            'arrayPerguntas' => $arrayPerguntas,
+        ]);
+    }*/
 }

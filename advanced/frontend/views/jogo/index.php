@@ -12,11 +12,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="jogo-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Jogo', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Criar Jogo', ['create'], ['class' => 'btn btn-facebook pull-right']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'jogo',
-            'idTime:datetime',
+            'idTime',
             'tempo_inicio',
             'tempo_fim',
 

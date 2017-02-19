@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\LocalizacoesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Localizacoes';
+$this->title = 'Localizações';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="localizacoes-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Localizacoes', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Criar Localizações', ['create'], ['class' => 'btn btn-facebook pull-right']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

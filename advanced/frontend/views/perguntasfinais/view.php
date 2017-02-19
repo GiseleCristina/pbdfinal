@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Perguntasfinais */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Perguntasfinais', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Perguntas Finais', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="perguntasfinais-view">

@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use yii\helpers\ArrayHelper;
 $this->title = 'Home';
 ?>
 <div class="site-index" align="center">
@@ -26,6 +26,27 @@ $this->title = 'Home';
                                     <th> Data </th>
                                 </tr>
                             </thead>
+                            <tbody>
+                            <?php
+                            $jogos = \common\models\Jogo::find()->all();
+                            $arrayjogos = ArrayHelper::map($jogos,'jogo','jogo');
+                            $arrayjogosNome = ArrayHelper::map($jogos,'jogo','idTime');
+                            $arrayjogosInicio = ArrayHelper::map($jogos,'jogo','tempo_inicio');
+                            $arrayjogosFinal = ArrayHelper::map($jogos,'jogo','tempo_fim');
+                            echo '<tr>';
+                            //echo $array[0].'TESTE'.$array[1];
+                            for($i = 1; $i <= count($arrayjogos); $i++){
+                                echo '<th>'.$arrayjogos[$i].'</th>';
+                                echo '<th>'.$arrayjogosNome[$i].'</th>';
+                                echo '<th>'.$arrayjogosInicio[$i].'</th>';
+                                echo '<th>'.$arrayjogosFinal[$i].'</th>';
+                            }
+
+                            echo '</tr>';
+                            ?>
+                            </tbody>
+                            
+
                         </table>
                     </div>
                 </div>

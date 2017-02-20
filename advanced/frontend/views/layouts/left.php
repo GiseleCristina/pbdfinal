@@ -37,6 +37,7 @@
                     ['label' => 'Jogos', 'icon' => 'fa fa-gamepad', 'url' => ['jogo/index']],
                     ['label' => 'Times', 'icon' => 'fa fa-group', 'url' => ['times/index']],
                     ['label' => 'Jogadores', 'icon' => 'fa fa-user', 'url' => ['jogador/index']],
+                    ['label' => 'Sobre', 'icon' => 'fa fa-smile-o', 'url' => ['site/about']],
 
                 ],
             ]

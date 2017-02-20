@@ -33,8 +33,6 @@ class Perguntas extends \yii\db\ActiveRecord
         return [
             [['fase', 'id_texto_pergunta'], 'required'],
             [['fase', 'id_texto_pergunta', 'id_localizacao'], 'integer'],
-            [['id_texto_pergunta'], 'unique'],
-            [['id_localizacao'], 'unique'],
             [['id_localizacao'], 'exist', 'skipOnError' => true, 'targetClass' => Localizacoes::className(), 'targetAttribute' => ['id_localizacao' => 'id']],
             [['id_texto_pergunta'], 'exist', 'skipOnError' => true, 'targetClass' => Textoperguntas::className(), 'targetAttribute' => ['id_texto_pergunta' => 'id']],
         ];

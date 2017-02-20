@@ -41,6 +41,17 @@ $(document).ready(function () {
 					marker.setPosition(location);
 					map.setCenter(location);
 					map.setZoom(16);
+					$.ajax({
+						type:"POST",
+						data: {
+							lat: latitude,
+							log: longitude
+						},
+						url:'index.php?r=localizacoes%2Fcreate',
+						sucess: function (resposta) {
+							alert(resposta);
+						}
+					});
 				}
 			}
 		})

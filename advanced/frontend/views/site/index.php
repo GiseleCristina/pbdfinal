@@ -11,12 +11,13 @@ $this->title = 'Home';
                 <div class="panel panel-default">
                     <div class="panel-heading" style="background-color: #9999FF ">
                         <h1 class="panel-title"> <h1> Treasure Admin </h1> </h1>
-                    </div>
-                    <div class="panel-body" style="background-color: #c3b8f4 ">
                         <p class="lead">Módulo administrativo do aplicativo TreusureQuest</p>
                     </div>
-                    <div class="panel-body">
+                    <div  style="background-color: #c3b8f4 ">
                         <p class="lead">Melhores Equipes</p>
+                    </div>
+                    <div class="panel-body">
+
                         <table class="table">
                             <thead>
                                 <tr>
@@ -41,6 +42,8 @@ $this->title = 'Home';
                                 echo '<th>'.$arrayjogosInicio[$i].'</th>';
                                 echo '<th>'.$arrayjogosFinal[$i].'</th>';
                             }
+                            //ordenar os jogos  com tempo de partida
+                            //calcular tempo de partida por jogo
 
                             echo '</tr>';
                             ?>

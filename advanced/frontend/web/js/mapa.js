@@ -5,7 +5,7 @@ var marker;
 function initialize() {
 	var latlng = new google.maps.LatLng(-3.0897351667569852,-59.96367048808287);
 	var options = {
-		zoom: 14,
+		zoom: 16,
 		center: latlng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -41,17 +41,7 @@ $(document).ready(function () {
 					marker.setPosition(location);
 					map.setCenter(location);
 					map.setZoom(16);
-					$.ajax({
-						type:"POST",
-						data: {
-							lat: latitude,
-							log: longitude
-						},
-						url:'index.php?r=localizacoes%2Fcreate',
-						sucess: function (resposta) {
-							alert(resposta);
-						}
-					});
+
 				}
 			}
 		})

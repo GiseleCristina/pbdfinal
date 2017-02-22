@@ -19,9 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idTime') ?>
 
-    <?= $form->field($model, 'tempo_inicio') ?>
-
-    <?= $form->field($model, 'tempo_fim') ?>
+    <?= $form->field($model, 'duracao') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

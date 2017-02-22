@@ -18,8 +18,7 @@ class JogoSearch extends Jogo
     public function rules()
     {
         return [
-            [['jogo', 'idTime'], 'integer'],
-            [['tempo_inicio', 'tempo_fim'], 'safe'],
+            [['jogo', 'idTime', 'duracao'], 'integer'],
         ];
     }
 
@@ -61,8 +60,7 @@ class JogoSearch extends Jogo
         $query->andFilterWhere([
             'jogo' => $this->jogo,
             'idTime' => $this->idTime,
-            'tempo_inicio' => $this->tempo_inicio,
-            'tempo_fim' => $this->tempo_fim,
+            'duracao' => $this->duracao,
         ]);
 
         return $dataProvider;

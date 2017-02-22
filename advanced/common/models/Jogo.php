@@ -9,8 +9,7 @@ use Yii;
  *
  * @property integer $jogo
  * @property integer $idTime
- * @property string $tempo_inicio
- * @property string $tempo_fim
+ * @property integer $duracao
  *
  * @property Times $idTime0
  */
@@ -30,9 +29,8 @@ class Jogo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idTime'], 'required'],
-            [['idTime'], 'integer'],
-            [['tempo_inicio', 'tempo_fim'], 'safe'],
+            [['idTime', 'duracao'], 'required'],
+            [['idTime', 'duracao'], 'integer'],
             [['idTime'], 'exist', 'skipOnError' => true, 'targetClass' => Times::className(), 'targetAttribute' => ['idTime' => 'id']],
         ];
     }
@@ -45,8 +43,7 @@ class Jogo extends \yii\db\ActiveRecord
         return [
             'jogo' => 'Jogo',
             'idTime' => 'Id Time',
-            'tempo_inicio' => 'Tempo Inicio',
-            'tempo_fim' => 'Tempo Fim',
+            'duracao' => 'Duracao',
         ];
     }
 

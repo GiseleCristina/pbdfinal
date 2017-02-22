@@ -30,8 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'jogo',
             'idTime:datetime',
-            'tempo_inicio',
-            'tempo_fim',
+            'duracao',
         ],
     ]) ?>
 

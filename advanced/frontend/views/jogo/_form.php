@@ -14,12 +14,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idTime')->textInput() ?>
 
-    <?= $form->field($model, 'tempo_inicio')->textInput() ?>
-
-    <?= $form->field($model, 'tempo_fim')->textInput() ?>
+    <?= $form->field($model, 'duracao')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Criar' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-facebook' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

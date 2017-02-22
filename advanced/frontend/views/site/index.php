@@ -17,14 +17,12 @@ $this->title = 'Home';
                         <p class="lead">Melhores Equipes</p>
                     </div>
                     <div class="panel-body">
-
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th> Colocação </th>
                                     <th> Nome </th>
-                                    <th> Tempo </th>
-                                    <th> Data </th>
+                                    <th> Duração </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,20 +30,16 @@ $this->title = 'Home';
                             $jogos = \common\models\Jogo::find()->all();
                             $arrayjogos = ArrayHelper::map($jogos,'jogo','jogo');
                             $arrayjogosNome = ArrayHelper::map($jogos,'jogo','idTime');
-                            $arrayjogosInicio = ArrayHelper::map($jogos,'jogo','tempo_inicio');
-                            $arrayjogosFinal = ArrayHelper::map($jogos,'jogo','tempo_fim');
-                            echo '<tr>';
+                            $arrayjogosInicio = ArrayHelper::map($jogos,'jogo','duracao');
+
                             //echo $array[0].'TESTE'.$array[1];
                             for($i = 1; $i <= count($arrayjogos); $i++){
+                                echo '<tr>';
                                 echo '<th>'.$arrayjogos[$i].'</th>';
                                 echo '<th>'.$arrayjogosNome[$i].'</th>';
-                                echo '<th>'.$arrayjogosInicio[$i].'</th>';
-                                echo '<th>'.$arrayjogosFinal[$i].'</th>';
+                                echo '<th>'.$arrayjogosInicio[$i].' segundos </th>';
+                                echo '</tr>';
                             }
-                            //ordenar os jogos  com tempo de partida
-                            //calcular tempo de partida por jogo
-
-                            echo '</tr>';
                             ?>
                             </tbody>
                             
